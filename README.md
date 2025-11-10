@@ -1,71 +1,34 @@
-# Create an animated "glowing serpent" GIF from the generated image
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
-import numpy as np
+<!-- SerpentSecOps • Hacker Console Aesthetic -->
+<div align="center">
 
-src_path = "/mnt/data/A_digital_illustration_features_a_neon_green_serpe.png"
-base = Image.open(src_path).convert("RGBA")
+  <!-- Animated “languages” replacement -->
+  <img src="./assets/serpent_glow.gif" width="640" alt="Glowing Serpent">
 
-# Scale down for README-friendly size
-max_w = 640
-scale = min(1.0, max_w / base.width)
-if scale < 1.0:
-    new_size = (int(base.width*scale), int(base.height*scale))
-    base = base.resize(new_size, Image.LANCZOS)
+  <!-- Console title -->
+  <h1>SerpentSecOps</h1>
 
-# Prepare frames with a soft neon breathing effect
-frames = []
-n = 32  # total frames
-# Precompute breathing curve (smooth in/out)
-t = np.linspace(0, 2*np.pi, n, endpoint=False)
-curve = (np.sin(t) + 1) / 2  # 0..1
-# Modulate between 85% and 160% brightness
-bright_min, bright_max = 0.85, 1.60
+  <!-- Thin neon divider -->
+  <img src="https://img.shields.io/badge/────-00ff99?style=flat&labelColor=000000&logoColor=00ff99" alt="" />
 
-# Create a subtle outer glow by repeatedly blurring an expanded alpha
-orig = base.copy()
-alpha = orig.split()[-1]
-glow_color = (0, 255, 140, 255)  # neon green-ish
-for i, c in enumerate(curve):
-    # Brightness change
-    b = bright_min + (bright_max - bright_min) * c
-    bright = ImageEnhance.Brightness(orig).enhance(b)
-    
-    # Outer glow intensity scales with curve
-    glow_strength = 6 + int(14 * c)  # blur radius
-    # Make glow layer from alpha
-    glow = Image.new("RGBA", bright.size, (0, 0, 0, 0))
-    # solid neon based on alpha
-    solid = Image.new("RGBA", bright.size, glow_color)
-    solid.putalpha(alpha)
-    glow = Image.alpha_composite(glow, solid)
-    # Expand via blur
-    for _ in range(2):
-        glow = glow.filter(ImageFilter.GaussianBlur(glow_strength))
-    # Slightly fade glow to avoid clipping
-    glow = ImageEnhance.Brightness(glow).enhance(0.8 + 0.4 * c)
-    
-    # Combine on black background
-    frame = Image.new("RGBA", bright.size, (0, 0, 0, 255))
-    frame = Image.alpha_composite(frame, glow)
-    frame = Image.alpha_composite(frame, bright)
-    
-    # Subtle vignette
-    vignette = Image.new("L", frame.size, 0)
-    # radial gradient
-    w, h = frame.size
-    x = np.linspace(-1, 1, w)[None, :]
-    y = np.linspace(-1, 1, h)[:, None]
-    r = np.sqrt(x**2 + y**2)
-    grad = (1 - np.clip((r - 0.3) / 0.7, 0, 1)) * 220  # 0..220
-    vignette = Image.fromarray(grad.astype(np.uint8), mode="L")
-    vignette = vignette.filter(ImageFilter.GaussianBlur(8))
-    frame.putalpha(255)
-    frame = Image.composite(frame, Image.new("RGBA", frame.size, (0,0,0,255)), ImageOps.invert(vignette))
-    frame = frame.convert("P", palette=Image.ADAPTIVE)
-    frames.append(frame)
+</div>
 
-out_path = "/mnt/data/serpent_glow.gif"
-# Save as looping GIF (≈ 24 fps -> 42ms/frame). Keep it sub-2MB typically.
-frames[0].save(out_path, save_all=True, append_images=frames[1:], duration=42, loop=0, optimize=True)
+<!-- Console block -->
+<pre>
+<span style="color:#00ff9a;">[BOOT]</span> initializing serpent-core … OK
+<span style="color:#00ff9a;">[NET ]</span> bindings loaded … OK
+<span style="color:#00ff9a;">[OPS ]</span> incident triage ▸ active
+<span style="color:#00ff9a;">[MON ]</span> telemetry online ▸ dark-mode
+<span style="color:#00ff9a;">[SIG ]</span> threat feed sync ▸ 𝘭𝘪𝘷𝘦
+</pre>
 
-out_path
+<!-- Quick status pills (no languages) -->
+<p align="center">
+  <img src="https://img.shields.io/badge/mode-stealth-00ff99?style=for-the-badge&labelColor=000000">
+  <img src="https://img.shields.io/badge/ops-blue_team-00ff99?style=for-the-badge&labelColor=000000">
+  <img src="https://img.shields.io/badge/focus-IR_%2F_detection-00ff99?style=for-the-badge&labelColor=000000">
+</p>
+
+<!-- Console sections -->
+<details>
+  <summary><b>▸ live console feed</b></summary>
+
