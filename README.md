@@ -21,39 +21,8 @@
 <span style="color:#00ff9a;">[SIG ]</span> threat feed sync ▸ 𝘭𝘪𝘷𝘦
 </pre>
 
-<!-- Quick status pills (no languages) -->
-<p align="center">
-  <img src="https://img.shields.io/badge/mode-stealth-00ff99?style=for-the-badge&labelColor=000000">
-  <img src="https://img.shields.io/badge/ops-blue_team-00ff99?style=for-the-badge&labelColor=000000">
-  <img src="https://img.shields.io/badge/focus-IR_%2F_detection-00ff99?style=for-the-badge&labelColor=000000">
-</p>
-
-<!-- Typing SVG Animation -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00FF99&center=true&vCenter=true&multiline=true&width=600&height=100&lines=Security+Operations+%7C+Incident+Response;Blue+Team+Defense+%7C+Threat+Hunting;Building+Resilient+Security+Systems" alt="Typing SVG" />
-</p>
-
 ---
 
-## 📊 Live Metrics
-
-<div align="center">
-
-  <!-- GitHub Stats Card -->
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=chartreuse-dark&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=00ff99&text_color=00ff99&icon_color=00ff99&border_color=00ff99"/>
-
-  <!-- Top Languages Card -->
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=chartreuse-dark&bg_color=0d1117&title_color=00ff99&text_color=00ff99&border_color=00ff99"/>
-
-</div>
-
-<!-- GitHub Activity Graph -->
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_GITHUB_USERNAME&theme=react-dark&bg_color=0d1117&color=00ff99&line=00ff99&point=00ff99&area=true&hide_border=false&border_color=00ff99" alt="GitHub Activity Graph"/>
-</div>
-
-<!-- Contribution Snake Animation -->
-<div align="center">
   <img src="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_GITHUB_USERNAME/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 </div>
 
