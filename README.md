@@ -130,20 +130,3 @@
       "infrastructure": ["Kubernetes security", "Cloud defense", "Container hardening"]
   }
   ```
-
-</details>
-
----
-
-## 📡 Connect
-
-
----
-
-<div align="center">
-
-  <!-- Profile Views Counter -->
-  <img src="https://komarev.com/ghpvc/?username=SerpentSecOps&color=00ff99&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile views"/>
-
-  </div>
-
